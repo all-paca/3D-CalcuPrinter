@@ -48,3 +48,6 @@ jobs:
     #- name: Test with pytest
     #  run: |
     #    pytest
+    #- name: build with pyinstaller
+    #  run: |
+    #    pyinstaller main.py
