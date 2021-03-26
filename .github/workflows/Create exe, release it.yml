@@ -1,4 +1,17 @@
+
 name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Tag name(if not provided it will use hash of build)'
+        required: false
+      home:
+        description: 'Release name(if not provided it will use hash of build)'
+        required: false
+        default: 'The Octoverse'
+ 
 
 jobs:
   build:
@@ -16,9 +29,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
+          #body:
           draft: false
           prerelease: false
