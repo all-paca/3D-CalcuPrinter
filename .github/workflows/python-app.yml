@@ -10,13 +10,13 @@ on:
     branches: [ main ]
 
 jobs:
-  formatting:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      # Run reorder-python-imports + black formatter
-      - name: Black Code Formatter
-        uses: tdeboissiere/python-format-action@master
+  #formatting:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #   - uses: actions/checkout@v2
+  #   # Run reorder-python-imports + black formatter
+  #   - name: Black Code Formatter
+  #     uses: tdeboissiere/python-format-action@master
   build:
 
     runs-on: windows
